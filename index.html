@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/fontawesome/all.css" />
+  <link rel="shortcut icon" href="image/favicon.ico" />
+
+  <title>GoodDaySnow</title>
+</head>
+
+<body>
+  <!-- header start -->
+
+  <header>
+    <!-- logo -->
+    <div class="logo">
+      <h1><a href="index.html" title="GoodDaySnow">GoodDaySnow</a></h1>
+    </div>
+    <!-- nav -->
+    <nav>
+      <ul>
+        <li><a href="#about">關於我們</a></li>
+        <li><a href="#class">課程介紹</a></li>
+        <li><a href="product.html">裝備購買</a></li>
+        <li><a href="#article">心得分享</a></li>
+        <li><a href="#contact">聯絡我們</a></li>
+      </ul>
+    </nav>
+    <!-- nav_icon -->
+    <div class="nav_icon">
+      <div class="member">
+        <a href="login.html"><img src="image/icon-member.svg" alt="" /></a>
+      </div>
+      <div class="shopcar">
+        <a href="cart.html"><img src="image/icon-shop.svg" alt="" /></a>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <!-- 雪季倒數計時器 start -->
+  <div id="clockdiv">
+    <div>
+      <div class="smalltext">雪季倒數</div>
+      <span class="days"></span>
+      <div class="smalltext">天</div>
+    </div>
+    <div>
+      <span class="hours"></span>
+      <div class="smalltext">時</div>
+    </div>
+    <div>
+      <span class="minutes"></span>
+      <div class="smalltext">分</div>
+    </div>
+    <div>
+      <span class="seconds"></span>
+      <div class="smalltext">秒</div>
+    </div>
+  </div>
+  <!-- 雪季倒數計時器 end -->
+
+  <!-- keyView start -->
+  <section class="keyView">
+    <ul class="slides">
+      <input type="radio" id="slide_1" name="radio_slide" checked />
+      <input type="radio" id="slide_2" name="radio_slide" />
+      <input type="radio" id="slide_3" name="radio_slide" />
+
+      <li class="slide">
+        <h1>
+          純白的世界裡，<br />
+          走進大山、穿越山林。
+        </h1>
+        <h3>森林裡的夢幻國度</h3>
+        <p>
+          滑雪季從季初就熱鬧滾滾，迫不及待要玩雪的滑雪客將從日本各地紛紛出籠！此時估計無論是哪個滑雪場，都會是人山人海的狀態。若您想體驗滑雪季初期特有的歡騰氣氛，就不要錯過這個時期！
+        </p>
+        <img id="snowBoard" src="image/snowboard_play_man.png" />
+      </li>
+      <li class="slide">
+        <h1>
+          滑雪是智慧的成果，<br />
+          希望的源泉。
+        </h1>
+        <h3>滑雪就是生活</h3>
+        <p>
+          日本各地有許許多多的滑雪場，開放的時期大致都落在11月下旬至12月上旬之間。一般來說，為了在降雪過後將場地積雪整頓成足以滑雪的狀態，勢必都得花上一點時間。
+        </p>
+      </li>
+      <li class="slide"></li>
+
+      <div class="control_label">
+        <label for="slide_1"></label>
+        <label for="slide_2"></label>
+        <label for="slide_3"></label>
+      </div>
+    </ul>
+  </section>
+  <!-- KeyView end -->
+
+  <!-- about start -->
+  <section id="about">
+    <div class="container">
+      <div class="booking">
+        <div class="ball"></div>
+        <h2>ski & snow</h2>
+        <h2>啟程</h2>
+        <p>
+          冬天來日本滑雪，想安全地享受滑雪的樂趣，就要找一間有中文教練的滑雪學院。東京近郊、北海道在冬天都會被皚皚白雪覆蓋，都是著名的滑雪勝地。想玩又未熟手的滑雪初學者，快手下訂！
+        </p>
+        <form action="">
+          <div>
+            <label for="#date">出發時間</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+          <div>
+            <div>
+              <label for="#adult">成人</label><br />
+              <input type="number" id="adult" placeholder="人數" required />
+            </div>
+            <div>
+              <label for="#child">兒童</label><br />
+              <input type="number" id="child" placeholder="人數" required />
+            </div>
+          </div>
+          <div><input type="submit" id="submit" /></div>
+        </form>
+      </div>
+      <div class="place">
+        <div>
+          <a href="#"><img src="image/about1.jpg" />
+            <h3>東京 class A</h3>
+            <p>全方位滑雪場，距離東京車程約1小時！大飯店和大型購物中心...</p>
+            <h6>更多資訊 ＋</h6>
+          </a>
+        </div>
+        <div>
+          <a href="#"><img src="image/about2.jpg" />
+            <h3>北海道 class B</h3>
+            <p>四周被大自然所包圍的富良野滑雪場，附近就有溫泉，可以逛逛...</p>
+            <h6>更多資訊 ＋</h6>
+          </a>
+        </div>
+      </div>
+      <div class="aboutUs">
+        <a href="#">
+          <img src="image/about3.jpg" />
+          <h3>台灣team 專業團隊</h3>
+          <p>
+            無需隨行翻譯人員，全天中文滑雪可成為私人課程，
+            針對學生的需求量身打造專屬課程。
+          </p>
+          <h6>更多資訊 ＋</h6>
+        </a>
+        <h3 class="titleAbout">關於我們</h3>
+      </div>
+    </div>
+  </section>
+  <!-- about end -->
+  <!-- class start -->
+  <section id="class">
+    <!-- classtop -->
+    <a href="#">
+      <div class="classTop">
+        <div class="wrap">
+          <div class="ball"></div>
+          <h3>東京 Class Ａ</h3>
+          <h2>戰勝了自己，<br />也戰勝了別人的世界觀。</h2>
+        </div>
+        <img src="image/class0.jpg" />
+      </div>
+    </a>
+
+    <!-- classbottom -->
+    <div class="classBottom">
+      <div class="arrowLeft">
+        <i class="far fa-arrow-alt-circle-left"></i>
+      </div>
+      <div class="colCard">
+        <ul>
+          <li>
+            <a href="#"><img src="image/class1.jpg" /></a>
+            <div class="text">
+              <a href="#">
+                <p>
+                  離長野縣的湯澤一小時路程。這是一個受歡迎的度假勝地，古樸的村莊是我們
+                  ...more
+                </p>
+              </a>
+              <a href="#"><span><i class="fas fa-plane-departure"></i>苗場</span></a>
+              <div>
+                <a href="#"><i class="fas fa-child"></i><span>美食,</span></a>
+                <a href="#"><i class="fas fa-utensils"></i><span>snowboard,</span></a>
+                <a href="#"><i class="far fa-snowflake"></i><span>snow</span></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#"><img src="image/class2.jpg" /></a>
+            <div class="text">
+              <a href="#">
+                <p>
+                  享受壯麗的景色和日本最長的滑雪道！長達8.5公里未天然滑雪道，山頂眺望富士山
+                  ...more
+                </p>
+              </a>
+              <a href="#"><span><i class="fas fa-plane-departure"></i>妙高</span></a>
+              <div>
+                <a href="#"><i class="fas fa-snowman"></i><span>美食,</span></a>
+                <a href="#"><i class="fas fa-skiing"></i><span>snowboard,</span></a>
+                <a href="#"><i class="far fa-snowflake"></i><span>snow</span></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#"><img src="image/class3.jpg" /></a>
+            <div class="text">
+              <a href="#">
+                <p>
+                  雫石滑雪場以岩手縣最高峰「岩手山」的壯闊景色聞名，日出和溫泉的行程
+                  ...more
+                </p>
+              </a>
+              <a href="#"><span><i class="fas fa-plane-departure"></i>雫石</span></a>
+              <div>
+                <a href="#"><i class="fas fa-snowman"></i><span>美食,</span></a>
+                <a href="#"><i class="fas fa-skiing"></i><span>snowboard,</span></a>
+                <a href="#"><i class="far fa-snowflake"></i><span>snow</span></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#"><img src="image/class4.jpg" /></a>
+            <div class="text">
+              <a href="#">
+                <p>
+                  由於神樂滑雪場位在高海拔地區，因此擁有相當優質的粉雪，為一大魅力之處。
+                  ...more
+                </p>
+              </a>
+              <a href="#"><span><i class="fas fa-plane-departure"></i>神樂</span></a>
+              <div>
+                <a href="#"><i class="fas fa-snowman"></i><span>美食,</span></a>
+                <a href="#"><i class="fas fa-skiing"></i><span>snowboard,</span></a>
+                <a href="#"><i class="far fa-snowflake"></i><span>snow</span></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="arrowRight">
+        <i class="far fa-arrow-alt-circle-right"></i>
+      </div>
+    </div>
+  </section>
+  <!-- class end -->
+  <!-- product start -->
+  <div id="product">
+    <div class="container">
+      <a href="product.html">
+        <div class="col_l">
+          <div class="wrap">
+            <div class="ball"></div>
+            <h3>裝備租買</h3>
+            <h2>專業 安全 有型 雪景的天</h2>
+            <a href="product.html"><button>更多商品</button></a>
+          </div>
+        </div>
+      </a>
+      <div class="col_r">
+        <div class="arrow_ProductL">
+          <i class="far fa-arrow-alt-circle-left"></i>
+        </div>
+        <ul>
+          <li>
+            <a href="product.html">
+              <img src="image/product1.png" />
+              <h3>雪衣 JACKET</h3>
+              <p>$299</p>
+              <button>租借</button>
+            </a>
+          </li>
+          <li>
+            <a href="product.html">
+              <img src="image/product2.png" />
+              <h3>雪褲 PANTS</h3>
+              <p>$199</p>
+              <button>租借</button>
+            </a>
+          </li>
+          <li>
+            <a href="product.html">
+              <img src="image/product3.png" />
+              <h3>雪靴 BOOTS</h3>
+              <p>$199</p>
+              <button>租借</button>
+            </a>
+          </li>
+        </ul>
+        <div class="arrow_ProductR">
+          <i class="far fa-arrow-alt-circle-right"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- product end -->
+  <!-- article start -->
+  <div id="article">
+    <!-- articletop -->
+    <a href="#">
+      <div class="articleTop">
+        <div class="wrap">
+          <div class="ball"></div>
+          <h3>文章分享</h3>
+          <h2>最美的風景<br />滑雪的天空線</h2>
+          <p>
+            東京新郊的GALA滑雪度假村位於日本新潟縣越後湯澤，有中文教練負責的初學者、進階的雙板/單板滑雪課程。GALA滑雪度假村針對中文旅客的服務全面，從填寫資料去租借雪衣、雙滑板、
+            雪杖、 雪靴等的裝備，都有中文範例
+          </p>
+        </div>
+        <img src="image/article.jpg" />
+      </div>
+    </a>
+
+    <!-- articlebottom -->
+    <div class="articleBottom">
+      <ul>
+        <li>
+          <a href="#">
+            <div class="articleIcon">
+              <i class="fas fa-globe-africa"></i>
+            </div>
+            <div class="text">
+              <h3>春雪適合初學者</h3>
+              <p>
+                一般來說大家滑雪都喜歡遇上鬆雪、厚雪、粉雪、軟雪，因為摔起來不痛滑起來也很高興舒服。
+              </p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="articleIcon"><i class="fas fa-utensils"></i></div>
+            <div class="text">
+              <h3>新手自助滑雪攻略</h3>
+              <p>
+                滑雪就像旅行一樣，是個很適合自助的活動，但是對於初學者來說，還是有些事必須知道，才好規劃第一趟滑雪之旅。
+              </p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="articleIcon"><i class="fas fa-snowman"></i></div>
+            <div class="text">
+              <h3>親子滑雪注意事項</h3>
+              <p>
+                第一次滑雪要學snowboard還是ski呢？就像直排輪和滑板不同一樣，這兩樣也是不同的運動，沒有哪一項特別好學。
+              </p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="articleIcon"><i class="fas fa-skiing"></i></div>
+            <div class="text">
+              <h3>Snowboard教學</h3>
+              <p>
+                QuickRide系統的『基本』課程，最後的目的是，讓你學會一隻腳固定在雪板時，如何在雪地上移動。
+              </p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- article end -->
+  <!-- contact start -->
+  <div id="contact">
+    <div class="container">
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14454.696812482887!2d121.56160522714735!3d25.079029293218586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac6fedcd2e59%3A0x4ada3c932a4448b4!2zMTE05Y-w5YyX5biC5YWn5rmW5Y2A5YWn5rmW56eR5a245ZyS5Y2A!5e0!3m2!1szh-TW!2stw!4v1600068959378!5m2!1szh-TW!2stw"
+          width="800" height="440" frameborder="0" style="border: 0" allowfullscreen="" aria-hidden="false"
+          tabindex="0"></iframe>
+      </div>
+      <div class="wrap">
+        <div class="text">
+          <div class="ball"></div>
+          <h3>聯絡我們</h3>
+        </div>
+        <form action="">
+          <label for="name">姓名</label>
+          <input type="text" id="name" required />
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required />
+          <label for="line">Line ID</label>
+          <input type="text" id="line" required />
+          <label for="tel">電話</label>
+          <input type="tel" name="" id="tel" required />
+          <label for="time">預約時間</label>
+          <input type="datetime-local" id="time" required />
+          <input type="submit" id="contactSub" value="送出" />
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- contact end -->
+  <!-- footer start -->
+  <footer>
+    <div class="container">
+      <i class="far fa-copyright"></i> copyright Jasper Chang
+    </div>
+  </footer>
+  <!-- footer end -->
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>

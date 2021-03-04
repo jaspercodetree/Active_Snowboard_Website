@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/all.css" />
+  <link rel="stylesheet" href="css/fontawesome/all.css" />
+  <link rel="shortcut icon" href="image/favicon.ico" />
+
+  <title>product</title>
+</head>
+
+<body>
+  <!-- header start -->
+  <div class="container sticky-top">
+    <nav class="navbar flex-row justify-content-end navbar-expand-xl navbar-light bg-white">
+      <!-- 這裡先讓父層靠右  再利用 mr-auto 讓logo靠左滿有趣的-->
+      <a class="navbar-brand mr-auto" href="index.html"><img src="image/logo-snowboard.png" alt="" /></a>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="index.html#about">關於我們 </a>
+          <a class="nav-item nav-link" href="index.html#class">課程介紹</a>
+          <a class="nav-item nav-link" href="product.html">裝備購買</a>
+          <a class="nav-item nav-link" href="index.html#article">心得分享</a>
+          <a class="nav-item nav-link" href="index.html#contact">聯絡我們</a>
+        </div>
+      </div>
+
+      <!-- nav_icon -->
+      <button class="navbar-toggler btn-outline-secondary" type="button" data-toggle="collapse"
+        data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar nav_icon">
+        <div class="member">
+          <a href="login.html"><img src="image/icon-member.svg" alt="" /></a>
+        </div>
+        <div class="shopcar">
+          <a href="cart.html"><img src="image/icon-shop.svg" alt="" /></a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- header end -->
+
+  <!-- product_dtail start -->
+  <div class="container product_dtail mt-5">
+    <div class="pd_pic_md row flex-row-reverse">
+      <!-- 用flex-row-reverse 目的是要巧妙地讓這張圖在網頁版不存在，在平板以下才顯示 -->
+      <div class="mb-4 col-12 d-md-none">
+        <img src="image/product_detail/product_detail_1.jpg" />
+      </div>
+
+      <div class="col-12 col-md-4">
+        <h2>Horrorscope 雪板 CAPiTA 美國</h2>
+        <p>
+          儘管 Burton
+          滑雪板看似不顯眼，卻佔據了我的腦海。一般來說，帶著這些問題，我們一起來審視Burton
+          滑雪板。我們不妨可以這樣來想: 面對如此難題，我們必須設想周全。
+        </p>
+        <p>NT$11,999</p>
+        <div class="input-group">
+          <select class="custom-select" id="chart-select">
+            <option selected value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <div class="input-group-append">
+            <button class="btn btn-outline-primary" type="button" data-toggle="modal" data-target="#exampleModelCart">
+              加入購物車
+            </button>
+            <!-- 回上頁按鈕 -->
+            <input type="button" class="btn btn-secondary ml-1" name="btnLastPage" id="btnLastPage" value="回上頁"
+              onClick="window.location.href='product.html';">
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModelCart" tabindex="-1" role="dialog"
+              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    已加入我的購物車
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 選單有多一個向下的符號 -->
+        <!-- 愛心圖示 加入收藏夾 -->
+        <div class="product_icon">
+          <!-- Button trigger modal -->
+          <span class="heart">
+            <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter">
+              <i class="fas fa-heart"> 加入我的收藏</i>
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    已加入我的收藏
+                  </button>
+                </div>
+              </div>
+            </div>
+          </span>
+        </div>
+
+        <!-- 商品購買須知 -->
+        <h6 class="mt-5 font-weight-bold">商品購買須知</h6>
+        <h6 class="mt-2 font-weight-light">
+          賣場上尺寸標明皆為平放測量以公分(CM)為單位，請參考『尺寸測量方式』說明及示意圖，衣物尺寸在1～3公分左右的誤差屬正常範圍，建議買家可依照相同的方式平量自己平時穿著的類似款衣服，再進行比較會更準確。賣場不接受尺寸不合、版型剪裁等方面的退換貨。若有任何疑問也請多多利用客服機制詢問，以避免造成不必要的誤會。
+        </h6>
+        <h6 class="mt-4 font-weight-bold">退換貨須知</h6>
+        <h6 class="mt-2 mb-4 font-weight-light">
+          為保護消費者權益，如確認商品斷貨等無法正常供貨情狀，我們提供兩種退換貨機制，可私訊小幫手您希望的退款方式，以便為您服務
+          額度轉購物金，另增5%回饋金：原金額轉為購物金，將獲得額外5%金額，如原金額為$1000元，則可獲得$1050元購物金。
+          全額退費：由買家提供銀行帳戶，將於七個工作天內將款項匯入指定帳戶。
+        </h6>
+      </div>
+      <!-- 手機版會往右跑無法跟層對齊 -->
+      <!-- 平板以上時，顯示的商品圖 -->
+      <div class="pd_pic_lg row col-12 col-md-8">
+        <div class="mb-4 d-none d-md-flex col-md-12">
+          <img src="image/product_detail/product_detail_7_1.jpg" />
+        </div>
+        <div class="mb-4 col-12 col-md-6">
+          <img src="image/product_detail/product_detail_7_2.jpg" />
+        </div>
+        <div class="mb-4 col-12 col-md-6">
+          <img src="image/product_detail/product_detail_7_3.jpg" />
+        </div>
+        <div class="col-12 col-md-12">
+          <img src="image/product_detail/product_detail_7_4.jpg" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- product_dtail end -->
+
+  <!-- footer start -->
+  <div id="pageFooter"></div>
+  <!-- footer end -->
+
+  <script src="js/bootstrap/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <script>
+    // $("#pageHeader").load("header.html");
+    $("#pageFooter").load("footer.html");
+  </script>
+</body>
+
+</html>

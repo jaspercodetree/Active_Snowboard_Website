@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/all.css?001" />
+  <link rel="stylesheet" href="css/fontawesome/all.css" />
+  <link rel="shortcut icon" href="image/favicon.ico" />
+
+  <title>product</title>
+</head>
+
+<body>
+  <!-- header start -->
+  <div class="container sticky-top">
+    <nav class="navbar flex-row justify-content-end navbar-expand-xl navbar-light bg-white">
+      <!--  這裡先讓父層靠右  再利用 mr-auto 讓logo靠左滿有趣的-->
+      <a class="navbar-brand mr-auto" href="index.html"><img src="image/logo-snowboard.png" alt="" /></a>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="index.html#about">關於我們 </a>
+          <a class="nav-item nav-link" href="index.html#class">課程介紹</a>
+          <a class="nav-item nav-link" href="product.html">裝備購買</a>
+          <a class="nav-item nav-link" href="index.html#article">心得分享</a>
+          <a class="nav-item nav-link" href="index.html#contact">聯絡我們</a>
+        </div>
+      </div>
+
+      <!-- nav_icon -->
+      <button class="navbar-toggler btn-outline-secondary" type="button" data-toggle="collapse"
+        data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar nav_icon">
+        <div class="member">
+          <a href="login.html"><img src="image/icon-member.svg" alt="" /></a>
+        </div>
+        <div class="shopcar">
+          <a href="cart.html"><img src="image/icon-shop.svg" alt="" /></a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- header end -->
+
+  <!-- cart start -->
+  <div class="container">
+    <form action="" method="post">
+      <div class="mx-auto row flex-wrap justify-content-center text-center">
+        <h2 class="col-12 bg-warning p-3 mt-3">感謝您的購買，商品將於三日內送達！</h2>
+        <h3 class="text-danger text mt-3 mr-2">您的歷史訂單明細</h3>
+        <button type="button" name="btnOrderList" class="btn btn-outline-primary mt-3 mb-3"
+          onclick="window.location.href='product.html';">完成</button>
+        <table class="table table-striped table-hover table-bordered text-center">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">訂單編號</th>
+              <th scope="col">產品編號</th>
+              <th scope="col">產品名稱</th>
+              <th scope="col">單價</th>
+              <th scope="col">數量</th>
+              <th scope="col">總價</th>
+              <th scope="col">付款方式</th>
+              <th scope="col">會員編號</th>
+              <th scope="col">帳號</th>
+              <th scope="col">姓名</th>
+              <th scope="col">email</th>
+              <th scope="col">手機</th>
+              <th scope="col">縣市</th>
+              <th scope="col">地區</th>
+              <th scope="col">地址</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">47</th>
+              <td>
+                1
+              </td>
+              <td>
+                Burton Process Camber Snowboard
+              </td>
+              <td>
+                12800
+              </td>
+              <td>
+                1
+              </td>
+              <td>
+                21760
+              </td>
+              <td>
+                信用卡/金融卡
+              </td>
+              <td>
+                77
+              </td>
+              <td>
+                GoldCityWu
+              </td>
+              <td>
+                伍佰
+              </td>
+              <td>
+                snowboard@GoodDay.com
+              </td>
+              <td>
+                0972999888
+              </td>
+              <td>
+                台北市
+              </td>
+              <td>
+                大安區
+              </td>
+              <td>
+                永安街15號
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">47</th>
+              <td>
+                3
+              </td>
+              <td>
+                Airblaster Stay Wild Parka Navy Grizzly
+              </td>
+              <td>
+                8760
+              </td>
+              <td>
+                2
+              </td>
+              <td>
+                21760
+              </td>
+              <td>
+                信用卡/金融卡
+              </td>
+              <td>
+                77
+              </td>
+              <td>
+                GoldCityWu
+              </td>
+              <td>
+                伍佰
+              </td>
+              <td>
+                snowboard@GoodDay.com
+              </td>
+              <td>
+                0972999888
+              </td>
+              <td>
+                台北市
+              </td>
+              <td>
+                大安區
+              </td>
+              <td>
+                永安街15號
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </form>
+  </div>
+  <!-- cart end -->
+
+  <!-- footer start -->
+  <div id="pageFooter"></div>
+  <!-- footer end -->
+
+  <script src="js/bootstrap/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <script>
+    $("#pageFooter").load("footer.html");
+  </script>
+</body>
+
+</html>

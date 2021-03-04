@@ -1,0 +1,14 @@
+/* product_detail */
+
+// 商品購買須知
+.product_detail h6 {
+  font-size: 14px;
+  color: #555;
+}
+
+// 平板以上時，顯示的商品圖
+.pd_pic_md img,
+.pd_pic_lg img {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/all.css" />
+  <link rel="stylesheet" href="css/fontawesome/all.css" />
+  <link rel="shortcut icon" href="image/favicon.ico" />
+
+  <title>product</title>
+</head>
+
+<body>
+  <!-- header start -->
+  <div class="container sticky-top">
+    <nav class="navbar flex-row justify-content-end navbar-expand-xl navbar-light bg-white">
+      <!-- 這裡先讓父層靠右  再利用 mr-auto 讓logo靠左滿有趣的-->
+      <a class="navbar-brand mr-auto" href="index.html"><img src="image/logo-snowboard.png" alt="" /></a>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="index.html#about">關於我們 </a>
+          <a class="nav-item nav-link" href="index.html#class">課程介紹</a>
+          <a class="nav-item nav-link" href="product.html">裝備購買</a>
+          <a class="nav-item nav-link" href="index.html#article">心得分享</a>
+          <a class="nav-item nav-link" href="index.html#contact">聯絡我們</a>
+        </div>
+      </div>
+
+      <!-- nav_icon -->
+      <button class="navbar-toggler btn-outline-secondary" type="button" data-toggle="collapse"
+        data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar nav_icon">
+        <div class="member">
+          <a href="login.html"><img src="image/icon-member.svg" alt="" /></a>
+        </div>
+        <div class="shopcar">
+          <a href="cart.html"><img src="image/icon-shop.svg" alt="" /></a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- header end -->
+
+  <!-- login start -->
+  <div class="container">
+    <div class="login mx-auto row flex-wrap justify-content-center">
+      <div class="login_keyview mr-2 col-12 col-md-7">
+        <img src="image/login.jpg" />
+      </div>
+      <div class="login_form row flex-column justify-content-center col-12 col-md-5">
+        <h3 class="mb-4">Log in</h3>
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">帳號</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="snowboard" />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">密碼</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="請輸入密碼" />
+          </div>
+          <div class="d-flex">
+            <div class="form-group mr-auto">
+              <a class="d-block" href="#">
+                <h6>忘記密碼</h6>
+              </a>
+            </div>
+            <a href="member_join.html" class="register btn btn-outline-primary">
+              註冊
+            </a>
+            <input type="button" class="login_in btn btn-primary" name="btnLogin" value="登入"
+              onClick="window.location.href='member_center.html'" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- login end -->
+
+  <!-- footer start -->
+  <div id="pageFooter"></div>
+  <!-- footer end -->
+
+  <script src="js/bootstrap/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <script>
+    // header 另外載入會有頁面跳動問題 不好看 所以目前暫時無法用
+    // $("#pageHeader").load("header.html");
+    $("#pageFooter").load("footer.html");
+  </script>
+</body>
+
+</html>

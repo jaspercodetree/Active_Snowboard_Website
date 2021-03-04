@@ -1,0 +1,24 @@
+/* member */
+// 會員中心 左欄
+.member .member_center a {
+  span {
+    // 發現如果沒給這行 跑下面的動畫會先有黑線再變藍線
+    border-bottom: 1px solid transparent;
+    color: #091b2f;
+  }
+  &:hover span {
+    border-bottom: 1px solid #36c1f2;
+    transition: 0.7s;
+  }
+}
+
+// 會員資料修改 中欄
+.member .member_modify .modify_title {
+  border-bottom: 1px solid #000;
+  padding-bottom: 8px;
+}
+
+#checkModify,
+#checkPassword {
+  color: #fff;
+}

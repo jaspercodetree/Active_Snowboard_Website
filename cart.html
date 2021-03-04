@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/all.css?001" />
+  <link rel="stylesheet" href="css/fontawesome/all.css" />
+  <link rel="shortcut icon" href="image/favicon.ico" />
+
+  <title>cart</title>
+</head>
+
+<body>
+  <!-- header start -->
+  <div class="container sticky-top">
+    <nav class="navbar flex-row justify-content-end navbar-expand-xl navbar-light bg-white">
+      <!--  這裡先讓父層靠右  再利用 mr-auto 讓logo靠左滿有趣的-->
+      <a class="navbar-brand mr-auto" href="index.html"><img src="image/logo-snowboard.png" alt="" /></a>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="index.html#about">關於我們 </a>
+          <a class="nav-item nav-link" href="index.html#class">課程介紹</a>
+          <a class="nav-item nav-link" href="product.html">裝備購買</a>
+          <a class="nav-item nav-link" href="index.html#article">心得分享</a>
+          <a class="nav-item nav-link" href="index.html#contact">聯絡我們</a>
+        </div>
+      </div>
+
+      <!-- nav_icon -->
+      <button class="navbar-toggler btn-outline-secondary" type="button" data-toggle="collapse"
+        data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar nav_icon">
+        <div class="member">
+          <a href="login.html"><img src="image/icon-member.svg" alt="" /></a>
+        </div>
+        <div class="shopcar">
+          <a href="cart.html"><img src="image/icon-shop.svg" alt="" /></a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- header end -->
+
+  <!-- cart start -->
+  <div class="container">
+    <div class="cart mx-auto row flex-wrap justify-content-center">
+      <form action="" method="post" name="cartform" id="cartform">
+
+        <table class="table table-striped table-hover table-bordered text-center m-5">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">產品名稱</th>
+              <th scope="col">單價</th>
+              <th scope="col">數量</th>
+              <th scope="col">總計</th>
+              <th scope="col">功能</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 照片欄位 欄位寬度要設定才不會被照片撐開跑版-->
+            <th scope="row" style="width:15%">
+              <img class="w-100" src="image/product/1.png.jpg">
+            </th>
+            <!-- 產品名稱 -->
+            <td style="vertical-align: middle;">
+              Burton Process Camber Snowboard
+            </td>
+            <!-- 單價 -->
+            <td style="vertical-align: middle;">$
+              12800
+            </td>
+
+            <!-- ！！！！關鍵欄位  數量 -->
+            <td style="vertical-align: middle;">
+              <!-- 由於$cart的edit方法為$cart->edit_item($_POST['updateid'][$j], $_POST['qty'][$j]);所以要記錄商品的id和數量 -->
+
+              <!-- 透過回圈給名字 可以對應到php更新時使用  隱藏此欄位 -->
+              <input name="updateid<?= $i ?>" type="hidden" value="1">
+
+              <!-- 減號按鈕 -->
+              <button type="button" name="btnReduceGoods<?= $i ?>" class="bg-warning">-</button>
+
+              <!-- 透過回圈給名字 可以對應到php更新時使用 -->
+              <input name="" type="text" value="1" size="3" style="text-align:center">
+
+              <!-- 加號按鈕 -->
+              <button type="button" name="btnAddGoods<?= $i ?>" class="bg-warning">+</button>
+
+            </td>
+            <!-- 總計  number_format() 通过千位分组来格式化数字-->
+            <td style="vertical-align: middle;">$
+              12800
+            </td>
+
+            <!-- 移除購物車內容 把對應的商品id記錄到網址 來讓刷新頁面後的$cart->del_item($rid)使用-->
+            <td style="vertical-align: middle;"><a href="">刪除</a></td>
+            </tr>
+
+            <th scope="row" style="width:15%">
+              <img class="w-100" src="image/product/3.jpg.jpg">
+            </th>
+            <!-- 產品名稱 -->
+            <td style="vertical-align: middle;">
+              Airblaster Stay Wild Parka Navy Grizzly
+            </td>
+            <!-- 單價 -->
+            <td style="vertical-align: middle;">$
+              4380
+            </td>
+
+            <!-- ！！！！關鍵欄位  數量 -->
+            <td style="vertical-align: middle;">
+              <!-- 由於$cart的edit方法為$cart->edit_item($_POST['updateid'][$j], $_POST['qty'][$j]);所以要記錄商品的id和數量 -->
+
+              <!-- 透過回圈給名字 可以對應到php更新時使用  隱藏此欄位 -->
+              <input name="updateid<?= $i ?>" type="hidden" value="1">
+
+              <!-- 減號按鈕 -->
+              <button type="button" name="btnReduceGoods<?= $i ?>" class="bg-warning">-</button>
+
+              <!-- 透過回圈給名字 可以對應到php更新時使用 -->
+              <input name="" type="text" value="2" size="3" style="text-align:center">
+
+              <!-- 加號按鈕 -->
+              <button type="button" name="btnAddGoods<?= $i ?>" class="bg-warning">+</button>
+
+            </td>
+            <!-- 總計  number_format() 通过千位分组来格式化数字-->
+            <td style="vertical-align: middle;">$
+              8760
+            </td>
+
+            <!-- 移除購物車內容 把對應的商品id記錄到網址 來讓刷新頁面後的$cart->del_item($rid)使用-->
+            <td style="vertical-align: middle;"><a href="">刪除</a></td>
+            </tr>
+
+            <tr>
+              <th scope="row"></th>
+              <td></td>
+              <td></td>
+              <td>運費</td>
+              <td>200</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row"></th>
+              <td></td>
+              <td></td>
+              <td>帳戶扣抵</td>
+              <td>0</td>
+              <td>
+                <!-- 付款方式 -->
+                <!-- text-align:center;text-align-last:center; 讓select文字置中 -->
+                <select class="form-control text-dark" name="payType" id="payType"
+                  style="text-align:center;text-align-last:center;">
+                  <option value="貨到付款">貨到付款</option>
+                  <option value="銀行轉帳">銀行轉帳</option>
+                  <option selected value="信用卡/金融卡">信用卡/金融卡</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row"></th>
+              <td></td>
+              <td></td>
+              <td>購買總金額</td>
+              <!-- 總金額 -->
+              <td class="text-danger">$
+                21760
+              </td>
+              <td>
+                <!-- ！！！！讓PHP用來判斷有無新增資料的input，隱藏欄位，每次重整，表單都會送出 -->
+                <input name="cartaction" type="hidden" id="cartaction" value="update">
+
+                <!-- 目前不需要以下更新按鈕，因為目前的判斷是加減按鈕點擊時，或是數量欄位按下enter時，表單就會送出資料判定，所以暫時拿掉 -->
+                <!-- <input type="submit" name="updatebtn" id="button3" value="更新購物車"> -->
+
+                <!-- 送出表單 -->
+                <input type="button" class="btn-danger" name="btnCheckOut" id="btnCheckOut" value="去買單"
+                  onclick="window.location.href='cart_orderlist.html';">
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>
+  <!-- cart end -->
+
+  <!-- footer start -->
+  <div id="pageFooter"></div>
+  <!-- footer end -->
+
+  <script src="js/bootstrap/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <script>
+    $("#pageFooter").load("footer.html");
+  </script>
+</body>
+
+</html>

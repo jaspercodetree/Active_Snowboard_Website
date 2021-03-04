@@ -1,0 +1,64 @@
+.navbar .navbar-nav .nav-link {
+  position: relative;
+  box-sizing: border-box;
+  line-height: 50px;
+  padding: 0 8px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #091b2f;
+  border-bottom: 0px solid transparent;
+  margin: 0 8px;
+}
+
+.navbar .navbar-nav .nav-link:nth-of-type(3) {
+  color: #f65a93;
+  background-color: #ffa;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: #36c1f2;
+}
+
+// 因為原本的寫法，會讓高度在hover時因為下邊框而長高，所以標題會有向上抖動的現象，因此透過偽元素並給予絕對定位來畫線解決
+.navbar .navbar-nav .nav-link:hover::after {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: 3px;
+  width: 105px;
+  height: 3px;
+  background-color: #f65a93;
+
+  // 原先寫法
+  // border-bottom: 3px solid #f65a93;
+  // transition: all 3s;
+}
+
+/* nav-icon */
+.nav_icon {
+  // display: flex;
+  // align-items: center;
+
+  div {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin: 8px;
+    border-radius: 10px;
+    background: rgb(213, 249, 253);
+    text-align: center;
+  }
+
+  div:hover {
+    background-color: #f65a93;
+  }
+
+  .member {
+    // margin-left: 50px;
+  }
+
+  img {
+    width: 70%;
+    vertical-align: middle;
+  }
+}

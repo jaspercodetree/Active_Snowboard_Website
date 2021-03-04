@@ -1,0 +1,942 @@
+@charset "UTF-8";
+/* 基本共同設定 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto serif TC';
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+input {
+  outline-color: #f65a93;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #091b2f;
+}
+
+h2 {
+  font-size: 46px;
+  color: #999999;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #091b2f;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #333333;
+}
+
+h6 {
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+/* header */
+header {
+  display: flex;
+  position: sticky;
+  top: 0px;
+  width: 100vw;
+  height: 100px;
+  line-height: 100px;
+  padding: 0 8vw;
+  text-align: center;
+  z-index: 999;
+  background-color: #fff;
+  /* logo */
+  /* nav */
+  /* nav-icon */
+}
+
+header .logo h1 a {
+  display: block;
+  width: 194px;
+  height: 100px;
+  color: transparent;
+  font-size: 0;
+  background: #aaf;
+  margin-right: 50px;
+  background: url(../image/logo-snowboard.png) no-repeat center center;
+  background-size: 100%;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li a {
+  padding: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #091b2f;
+  border-bottom: 0px solid transparent;
+  margin: 0 8px;
+}
+
+header nav ul li:nth-of-type(3) a {
+  color: #f65a93;
+  background-color: #ffa;
+}
+
+header nav ul li a:hover {
+  color: #36c1f2;
+  border-bottom: 3px solid #f65a93;
+  transition: all 0.3s;
+}
+
+header .nav_icon {
+  display: flex;
+  align-items: center;
+}
+
+header .nav_icon div {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin: 8px;
+  border-radius: 10px;
+  background: #d5f9fd;
+  text-align: center;
+}
+
+header .nav_icon div:hover {
+  background-color: #f65a93;
+}
+
+header .nav_icon .member {
+  margin-left: 50px;
+}
+
+header .nav_icon img {
+  width: 70%;
+  vertical-align: middle;
+}
+
+/* 雪季倒數計時器 */
+#clockdiv {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  font-weight: 700;
+  text-align: center;
+  font-size: 24px;
+}
+
+#clockdiv > div {
+  display: flex;
+  align-items: flex-end;
+}
+
+#clockdiv > div > div {
+  padding: 0 5px;
+  text-shadow: 1px 1.5px #fff;
+}
+
+#clockdiv > div > div:first-child {
+  align-self: flex-start;
+  font-size: 20px;
+  text-shadow: 1px 1.5px #fff;
+  margin-right: 5px;
+}
+
+#clockdiv > div > span {
+  padding: 15px;
+  border-radius: 0 0 50% 50%;
+  color: #fff;
+  background: #36c1f2;
+  box-shadow: 2px 2px 5px white, 2px 2px 5px #01425a inset;
+}
+
+#clockdiv > div > .smalltext {
+  padding-bottom: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #f65a93;
+}
+
+/* keyView */
+.keyView {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  height: 700px;
+}
+
+.keyView .slides {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+}
+
+.keyView .slides input {
+  display: none;
+  position: relative;
+  z-index: 2;
+}
+
+.keyView .slides #slide_1:checked ~ .control_label label:nth-of-type(1) {
+  background-color: #f65a93;
+}
+
+.keyView .slides #slide_2:checked ~ .control_label label:nth-of-type(2) {
+  background-color: #f65a93;
+}
+
+.keyView .slides #slide_3:checked ~ .control_label label:nth-of-type(3) {
+  background-color: #f65a93;
+}
+
+.keyView .slides #slide_1:checked ~ .slide {
+  transform: translateX(0);
+}
+
+.keyView .slides #slide_2:checked ~ .slide {
+  transform: translateX(-100%);
+}
+
+.keyView .slides #slide_3:checked ~ .slide {
+  transform: translateX(-200%);
+}
+
+.keyView .slides .slide {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.keyView .slides .slide:nth-of-type(1) {
+  background: url("../image/cover1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.keyView .slides .slide:nth-of-type(2) {
+  left: 100%;
+  background: url("../image/cover3.jpg");
+  background-size: cover;
+}
+
+.keyView .slides .slide:nth-of-type(3) {
+  left: 200%;
+  background: url("../image/cover2.jpg");
+  background-size: cover;
+}
+
+.keyView .slides .slide h1 {
+  position: relative;
+  z-index: 200;
+  margin: 150px 0 0 150px;
+}
+
+.keyView .slides .slide h3 {
+  position: relative;
+  z-index: 200;
+  margin: 25px 0 0 250px;
+}
+
+.keyView .slides .slide p {
+  position: relative;
+  z-index: 200;
+  width: 360px;
+  height: 110px;
+  margin: 25px 0 0 250px;
+}
+
+.keyView .slides .slide #snowBoard {
+  position: absolute;
+  top: -1000px;
+  z-index: 1;
+  max-width: 25%;
+  height: auto;
+}
+
+.keyView .slides .control_label {
+  position: absolute;
+  left: 420px;
+  transform: translateX(-50%);
+  bottom: 145px;
+}
+
+.keyView .slides .control_label label {
+  display: inline-block;
+  width: 100px;
+  height: 16px;
+  border-radius: 5px;
+  background-color: #d5f9fd;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.keyView .slides .control_label label:hover {
+  background-color: #36c1f2;
+}
+
+/* about*/
+#about {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  padding-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  background: url("../image/bg1-2.jpg") no-repeat 0px 500px;
+}
+
+#about .container {
+  display: flex;
+  width: 1080px;
+  height: 600px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* about >> booking */
+.container .booking {
+  position: relative;
+  height: 600px;
+  flex: 3;
+}
+
+.container .booking .ball {
+  position: absolute;
+  top: 6px;
+  left: -20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  background-color: #36c1f2;
+  z-index: -10;
+}
+
+.container .booking h2:nth-child(3) {
+  color: #091b2f;
+}
+
+.container .booking p {
+  width: 277px;
+  height: 110px;
+  margin: 27px 0;
+}
+
+.container .booking form {
+  display: flex;
+  flex-direction: column;
+  width: 227px;
+}
+
+.container .booking form > div:first-child {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.container .booking form > div:first-child label {
+  margin-bottom: 10px;
+}
+
+.container .booking form #date {
+  width: 90%;
+}
+
+.container .booking form > div:nth-child(2) {
+  display: flex;
+}
+
+.container .booking #adult,
+.container .booking #child {
+  width: 80%;
+  margin: 10px 0 24px 0;
+  text-align: center;
+}
+
+.container .booking #submit {
+  width: 90%;
+  height: 32px;
+  border: none;
+  background-color: #f65a93;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 2px #77042efa;
+}
+
+.container .booking #submit:hover {
+  background-color: #fd005dfa;
+}
+
+/* about >> place */
+.container .place {
+  height: 600px;
+  flex: 3.5;
+}
+
+.container .place div {
+  height: 50%;
+  padding: 12px 32px 12px 56px;
+}
+
+.container .place div img {
+  border-radius: 16px;
+}
+
+.container .place div:hover {
+  transform: scale(1.02);
+  transition: all 0.5s;
+}
+
+.container .place h3 {
+  line-height: 1.5;
+}
+
+.container .place h6 {
+  text-align: right;
+}
+
+/* about >> aboutUs */
+.container .aboutUs {
+  position: relative;
+  height: 600px;
+  padding: 12px 0;
+  flex: 5;
+}
+
+.container .aboutUs img {
+  height: 478px;
+  border-radius: 16px;
+}
+
+.container .aboutUs h3 {
+  line-height: 1.5;
+}
+
+.container .aboutUs .titleAbout {
+  position: absolute;
+  right: -10px;
+  top: 45%;
+  transform: rotate(90deg);
+  border-bottom: 5px solid #f65a93;
+  font-weight: 700;
+}
+
+.container .aboutUs p {
+  width: 382px;
+}
+
+.container .aboutUs h6 {
+  width: 382px;
+  text-align: right;
+}
+
+.container .aboutUs:hover {
+  transform: scale(1.01);
+  transition: all 0.5s;
+}
+
+/* class */
+#class {
+  height: 900px;
+  background-color: #d5f9fd;
+  padding-top: 100px;
+  z-index: -10;
+}
+
+/* classTop */
+.classTop {
+  position: relative;
+  margin: 0 130px 25px 158px;
+  text-align: right;
+}
+
+.classTop:hover {
+  transform: scale(1.02);
+  transition: all 0.5s;
+}
+
+.classTop .wrap {
+  position: absolute;
+  top: 95px;
+  left: 24px;
+  text-align: left;
+}
+
+.classTop .wrap .ball {
+  position: absolute;
+  top: 30px;
+  left: -20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  background-color: #36c1f2;
+  z-index: 1;
+}
+
+.classTop .wrap h3 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.classTop .wrap h2 {
+  position: relative;
+  z-index: 2;
+  color: #091b2f;
+}
+
+.classTop img {
+  max-width: 884px;
+  height: 441px;
+  border-radius: 32px;
+}
+
+/* classBottom */
+.classBottom {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  max-width: 1440px;
+}
+
+.classBottom .arrowLeft,
+.classBottom .arrowRight {
+  position: absolute;
+  font-size: 50px;
+}
+
+.classBottom .arrowLeft {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.classBottom .arrowRight {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.colCard ul {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+}
+
+.colCard ul li {
+  flex: 1;
+  margin: 0 1% 0 1%;
+  padding: 0.8%;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 16px;
+}
+
+.colCard ul li:hover {
+  background-color: #36c1f2;
+}
+
+.colCard ul li img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.colCard ul li .text {
+  text-align: left;
+  padding: 0 5% 0 5%;
+}
+
+.colCard ul li .text p {
+  font-weight: 400;
+  margin: 12px 0 8px 0;
+}
+
+.colCard ul li .text i {
+  margin-right: 4px;
+}
+
+.colCard ul li .text span {
+  font-size: 14px;
+  font-weight: 300;
+  margin-right: 6px;
+}
+
+#product {
+  height: 800px;
+  padding: 100px 0;
+  background: url("../image/bg2-1.png") no-repeat 100px 100px;
+}
+
+#product .container {
+  display: flex;
+  width: 1175px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+.col_l {
+  flex: 1;
+}
+
+.col_l .wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 8%;
+  justify-content: center;
+  background: url("../image/product0.jpg") no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+}
+
+.col_l .wrap .ball {
+  position: absolute;
+  top: 230px;
+  left: 8px;
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  background-color: #36c1f2;
+  z-index: 1;
+}
+
+.col_l .wrap h3 {
+  position: relative;
+  z-index: 2;
+  font-weight: 700;
+}
+
+.col_l .wrap h2 {
+  position: relative;
+  font-size: 32px;
+  line-height: 1.5;
+  color: #f65a93;
+  z-index: 2;
+}
+
+.col_l .wrap button {
+  width: 90%;
+  height: 32px;
+  border: none;
+  margin-top: 16px;
+  background-color: #f65a93;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 2px #77042efa;
+}
+
+.col_l .wrap button:hover {
+  background-color: #fd005dfa;
+}
+
+.col_r {
+  position: relative;
+  display: flex;
+  flex: 3;
+}
+
+.col_r .arrow_ProductL,
+.col_r .arrow_ProductR {
+  position: absolute;
+  font-size: 50px;
+}
+
+.col_r .arrow_ProductL {
+  top: 50%;
+  left: 1%;
+  transform: translateY(-50%);
+}
+
+.col_r .arrow_ProductR {
+  top: 50%;
+  right: 1%;
+  transform: translateY(-50%);
+}
+
+.col_r ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 60px;
+}
+
+.col_r ul li + li {
+  margin-left: 24px;
+}
+
+.col_r ul li {
+  text-align: center;
+}
+
+.col_r ul li:hover img {
+  transform: translateY(-50px) scale(1.5);
+  transition: all 0.5s;
+}
+
+.col_r ul li img {
+  max-width: 240px;
+  height: 178px;
+  border-radius: 16px;
+}
+
+.col_r ul li p {
+  font-size: 18px;
+  font-weight: 700;
+  color: #091b2f;
+}
+
+.col_r ul li button {
+  width: 90%;
+  height: 32px;
+  border: none;
+  margin-top: 8px;
+  background-color: #f65a93;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 2px #77042efa;
+}
+
+.col_r ul li button:hover {
+  background-color: #fd005dfa;
+}
+
+/* article */
+#article {
+  height: 800px;
+  background-color: #d5f9fd;
+  padding-top: 100px;
+  z-index: -10;
+}
+
+/* articleTop */
+.articleTop {
+  position: relative;
+  margin: 0 130px 25px 158px;
+  padding-right: 8%;
+  text-align: right;
+}
+
+.articleTop:hover {
+  transform: scale(1.02);
+  transition: all 0.5s;
+}
+
+.articleTop .wrap {
+  position: absolute;
+  top: 95px;
+  left: 24px;
+  text-align: left;
+}
+
+.articleTop .wrap .ball {
+  position: absolute;
+  top: 30px;
+  left: -20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  background-color: #36c1f2;
+  z-index: 1;
+}
+
+.articleTop .wrap h3 {
+  font-weight: 700;
+}
+
+.articleTop .wrap h2 {
+  position: relative;
+  line-height: 1.2;
+  z-index: 2;
+  color: #091b2f;
+  margin-bottom: 16px;
+}
+
+.articleTop .wrap p {
+  width: 28%;
+  font-weight: 100;
+}
+
+.articleTop img {
+  height: 405px;
+  border-radius: 16px;
+}
+
+/* articleBottom */
+.articleBottom {
+  display: flex;
+  justify-content: center;
+}
+
+.articleBottom ul {
+  display: flex;
+  width: 90%;
+}
+
+.articleBottom ul li + li {
+  margin-left: 1%;
+}
+
+.articleBottom ul li:hover {
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.articleBottom ul li a {
+  display: flex;
+}
+
+.articleBottom ul li a .articleIcon {
+  margin: 8px 20px;
+  font-size: 33px;
+  color: #36c1f2;
+}
+
+.articleBottom ul li a h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.articleBottom ul li a p {
+  width: 90%;
+  font-weight: 100;
+}
+
+/* contact */
+#contact {
+  height: 620px;
+  padding-top: 150px;
+}
+
+#contact .container {
+  display: flex;
+  width: 100%;
+}
+
+#contact .container .map {
+  flex: 7;
+  margin-right: 48px;
+}
+
+#contact .container .map img {
+  width: 100%;
+  border-radius: 0 16px 16px 0;
+}
+
+#contact .container .wrap {
+  flex: 6;
+}
+
+#contact .container .wrap .text {
+  position: relative;
+}
+
+#contact .container .wrap .text .ball {
+  position: absolute;
+  top: -23px;
+  left: -18px;
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  background-color: #36c1f2;
+  z-index: 1;
+}
+
+#contact .container .wrap .text h3 {
+  position: relative;
+  font-weight: 700;
+  z-index: 2;
+  margin-bottom: 55px;
+}
+
+#contact .wrap > form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+#contact .wrap > form input {
+  border: none;
+  border-bottom: 1px solid #36c1f2;
+  margin-bottom: 20px;
+  outline: none;
+  text-align: right;
+}
+
+#contact .wrap > form #contactSub {
+  width: 100%;
+  height: 32px;
+  border: none;
+  background-color: #f65a93;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 2px #77042efa;
+}
+
+#contact .wrap > form #contactSub:hover {
+  background-color: #fd005dfa;
+}
+
+/* footer */
+footer {
+  width: 100vw;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: #fff;
+  background-color: #36c1f2;
+}
+/*# sourceMappingURL=index.css.map */
