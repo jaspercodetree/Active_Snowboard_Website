@@ -66,7 +66,7 @@ header {
   height: 100px;
   line-height: 100px;
   padding: 0 8vw;
-  text-align: center;
+  justify-content: space-between;
   z-index: 999;
   background-color: #fff;
   /* logo */
@@ -81,7 +81,7 @@ header .logo h1 a {
   color: transparent;
   font-size: 0;
   background: #aaf;
-  margin-right: 50px;
+  margin-right: 60px;
   background: url(../image/logo-snowboard.png) no-repeat center center;
   background-size: 100%;
 }
@@ -91,12 +91,12 @@ header nav ul {
 }
 
 header nav ul li a {
-  padding: 10px;
+  padding: 10px 4px;
   font-size: 24px;
   font-weight: 700;
   color: #091b2f;
   border-bottom: 0px solid transparent;
-  margin: 0 8px;
+  margin: 0 6px;
 }
 
 header nav ul li:nth-of-type(3) a {
@@ -130,7 +130,7 @@ header .nav_icon div:hover {
 }
 
 header .nav_icon .member {
-  margin-left: 50px;
+  margin-left: 60px;
 }
 
 header .nav_icon img {
